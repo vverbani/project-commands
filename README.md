@@ -38,10 +38,6 @@ docker rm -f $(docker ps -a -q)
 docker rmi $(docker images -a -q)
 docker volume rm $(docker volume ls -q)
 yes | docker volume prune
-docker rmi $(docker images -a -q)
-docker volume rm $(docker volume ls -q)
-yes | docker volume prune
-yes | docker system prune
 yes | docker system prune -a
 ```
 
